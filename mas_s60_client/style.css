@@ -1,0 +1,218 @@
+body {
+    display: flex;
+    flex-direction: column;
+
+    height: 80vh;
+
+    font-family: 'Raleway', serif;
+    font-size: 2em;
+
+    background-color: hsl(233, 64%, 19%);
+    color: white;
+
+    padding-top: 100px;
+    margin: 0;
+}
+
+body * {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+body div {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    border: 3px solid hsl(225, 66%, 40%);
+    border-radius: 15px;
+
+    color: #fff;
+    background-color: hsl(225, 66%, 40%);
+
+    font-size: 0.75em;
+    font-family: "Raleway", serif;
+
+    cursor: pointer;
+    padding: 0.5em 1.5em;
+    display: inline-block;
+    letter-spacing: 1px;
+    outline: none;
+    position: relative;
+}
+
+button:active {
+    top: 2px;
+}
+
+button:hover {
+    background: transparent;
+}
+
+#ip_addr {
+    display: None;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+body > div {
+    height: 100%;
+}
+
+#intro_title {
+    font-size: 3em;
+    margin-top: 0.5em;
+    margin-bottom: 0.25em;
+}
+
+#intro_instructions {
+    line-height: 1.25em;
+}
+
+#turn_on_button {
+    margin-top: 4em;
+}
+
+#preview_block {
+    max-width: 50%;
+    margin-bottom: 1em;
+    position: relative;
+}
+
+#preview_block > * {
+    width: 100%;
+    height: 100%;
+}
+
+#webcam_preview {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+#head_guide {
+    border: 3px solid darkblue;
+    position: absolute;
+    width: 50%;
+    height: 66%;
+    left: 25%;
+    top: 8%;
+}
+
+#passage, #record_instructions {
+    text-align: center;
+}
+
+#passage {
+    font-size: 0.8em;
+    margin: 1.5em auto;
+}
+
+#playback_view {
+    width: 30em;
+}
+
+#playback {
+    max-width: 80%;
+    margin-bottom: 1em;
+}
+
+#redo_button, #upload_button {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+/*
+Post-upload view
+ */
+
+#session {
+    flex-direction: row;
+    width: 95%;
+    max-width: 1500px;
+}
+
+#session > div {
+    width: 100%;
+
+    /*display: flex;*/
+    /*justify-content: space-between;*/
+    /*margin-top: 50px;*/
+}
+
+.session_title {
+    margin-bottom: 1em;
+}
+
+.session_content {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#original_vid, #options {
+    width: 100%;
+    display: flex;
+    font-size: 0.75em;
+}
+
+select {
+    font-family: "Raleway", serif;
+    font-size: 0.75em;
+}
+
+#voice_clone {
+    height: 2em;
+    width: 1.5em;
+}
+
+#src_video {
+    margin: 10px auto;
+    /*height: 60%;*/
+    width: 60%;
+}
+
+
+#original_vid > button {
+    border-width: 2px;
+    border-radius: 7px;
+}
+
+#options {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+}
+
+.wrapper > *:first-child {
+    margin-bottom: 5px;
+}
+
+#selector_options > * {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#out_display {
+    width: 100%;
+}
+
+#out_display > .session_content {
+    justify-content: center;
+    margin: 0;
+    /*padding-bottom: 20%;*/
+}
+
+#out_display video {
+    width: 80%;
+    height: 60%;
+}

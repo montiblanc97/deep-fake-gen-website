@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Deepfake Yourself</title>
+
+    <script type="text/javascript" src="webcam.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="session.js"></script>
+    <script type="text/javascript" src="util.js"></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<input type="text" value="localhost:5000" id="ip_addr"/>
+<div id="input">
+    <div id="webcam_view" class="input_view">
+        <div id="intro_section">
+            <div id="intro_title">
+                Deepfake Yourself
+            </div>
+            <div id="intro_instructions">
+                Record yourself reading a passage<br>
+                We'll make a deepfake of you saying something else!
+            </div>
+            <button id="turn_on_button">
+                Let's get started!
+            </button>
+        </div>
+        <div id="record_section">
+            <div id="preview_block">
+                <video id="webcam_preview" autoplay muted></video>
+                <div id="head_guide"></div>
+            </div>
+            <div id="record_instructions">
+                Record yourself saying this passage<br>
+                Try to keep your head in the blue box
+            </div>
+            <div id="passage">
+                I shall be telling this with a sigh<br>
+                Somewhere ages and ages hence:<br>
+                Two roads diverged in a wood, and I<br>
+                I took the one less traveled by,<br>
+                And that has made all the difference.
+            </div>
+            <button id="start_button">
+                Start Recording
+            </button>
+            <button id="stop_button">Stop Recording</button>
+        </div>
+    </div>
+    <div id="playback_view" class="input_view">
+        <video id="playback" controls></video>
+        <button id="redo_button">
+            Re-record video
+        </button>
+        <button id="upload_button">
+            Use this video
+        </button>
+    </div>
+</div>
+<div id="session">
+    <div id="selector">
+        <div class="session_title">Input</div>
+        <div class="session_content">
+            <div id="original_vid">
+                <label>Original Video</label>
+                <video id="src_video" controls></video>
+                <button id="back_button">
+                    Retake Video
+                </button>
+            </div>
+            <div id="options">
+                <div class="wrapper">
+                    <label for="sample_select">Audio to Say</label>
+                    <select id="sample_select"></select>
+                </div>
+                <div class="wrapper">
+                    <label for="voice_clone">Use Voice-Cloning</label>
+                    <input type="checkbox" id="voice_clone"/>
+                </div>
+                <div class="wrapper">
+                    <label for="model_select">Model</label>
+                    <select id="model_select"></select>
+                </div>
+            </div>
+            <button id="run_button">Run</button>
+        </div>
+    </div>
+
+    <div id="out_display">
+        <div class="session_title">Output</div>
+        <div class="session_content">
+            <video id="out_video" controls autoplay></video>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
